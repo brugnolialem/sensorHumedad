@@ -13,7 +13,7 @@ CommModule::CommModule(uint8_t rx, uint8_t tx)
 
 
 #if (USING_MQTT)
-CommModule::CommModule(unsigned int KeepAlive) : 
+CommModule::CommModule(unsigned int KeepAlive) : MQTT(KeepAlive)
 {
 
 }

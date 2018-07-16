@@ -35,7 +35,7 @@
 
 
 // Internet Config
-#if ((TX_EMAIL == 1 || RX_EMAIL == 1) || (TX_MQTT == 1 || RX_MQTT == 1))
+#if (USING_EMAIL || USING_MQTT)
 	#define INTERNET_APN					"antel.lte"
 	#define INTERNET_USER					""
 	#define INTERNET_PASSWORD				""
@@ -43,14 +43,14 @@
 
 
 // SMS Config
-#if (TX_SMS == 1 || RX_SMS == 1)
+#if (USING_SMS)
 	#define SMS_HUMIDITY_SENSOR_NUMBER		"+598..."
 	#define SMS_DEFAULT_REPORT_NUMBER		"+598..."
 #endif
 
 
 // Email Config
-#if (TX_EMAIL == 1 || RX_EMAIL == 1)
+#if (USING_EMAIL)
 	#define EMAIL_HUMIDITY_SENSOR			"humsensor0@gmail.com"
 	#define EMAIL_HUMIDITY_SENSOR_PASSWORD	"humSensor_0"
 
@@ -65,7 +65,7 @@
 
 
 // MQTT Config
-#if (TX_MQTT == 1 || RX_MQTT == 1)	
+#if (USING_MQTT)	
 	#define MQTT_REPORT_TOPIC				"humSensor_0/report"
 	#define MQTT_RECEPTION_TOPIC			"humSensor_0/receive"
 
